@@ -15,7 +15,7 @@ However this is a generalization of what is written there to handle general grow
 To solve Hexagonal MULTI GRID efficiently use the grid sizes listed in the grid-efficient-possion.pdf file.
 
 Input and the grid should be given as:
-
+```
 state 6 12
  u u u u u u 
 u u u u u u 
@@ -82,7 +82,7 @@ every  10
 
 colorState 13 lightgray black red yellow gray gray darkgreen gray gray darkblue green darkred green  
 colorSites 13 lightgray black red yellow gray gray darkgreen gray gray darkblue green darkred green  
-
+```
 
 ### CMD-VERSION Usage:
 
