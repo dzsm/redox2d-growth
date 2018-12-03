@@ -93,4 +93,10 @@ To plot use:
 > mkdir pngs
 > python plot_output.py
 
+### QT-Version:
+
+Load or copy-paste the state.txt from the ./qt-version/state.txt to state as well as input.
+
+![](qt-version/demo.png)
+
 

@@ -45,54 +45,33 @@
 #include <QMargins>
 #include <qmath.h>
 #include <limits>
-
 #if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
                                                                                                                         #  include <qnumeric.h>
 #  include <QPrinter>
 #  include <QPrintEngine>
 #else
-
 #  include <QtNumeric>
 #  include <QtPrintSupport>
-
 #endif
 
 class QCPPainter;
-
 class QCustomPlot;
-
 class QCPLayerable;
-
 class QCPLayoutElement;
-
 class QCPLayout;
-
 class QCPAxis;
-
 class QCPAxisRect;
-
 class QCPAxisPainterPrivate;
-
 class QCPAbstractPlottable;
-
 class QCPGraph;
-
 class QCPAbstractItem;
-
 class QCPItemPosition;
-
 class QCPLayer;
-
 class QCPPlotTitle;
-
 class QCPLegend;
-
 class QCPAbstractLegendItem;
-
 class QCPColorMap;
-
 class QCPColorScale;
-
 class QCPBars;
 
 
@@ -476,7 +455,6 @@ protected:
     // non-property members:
     QStack<bool> mAntialiasingStack;
 };
-
 Q_DECLARE_OPERATORS_FOR_FLAGS(QCPPainter::PainterModes)
 
 
@@ -1939,7 +1917,6 @@ private:
 
     friend class QCPAxisRect;
 };
-
 Q_DECLARE_OPERATORS_FOR_FLAGS(QCPAxis::SelectableParts)
 Q_DECLARE_OPERATORS_FOR_FLAGS(QCPAxis::AxisTypes)
 Q_DECLARE_METATYPE(QCPAxis::SelectablePart)
@@ -3390,7 +3367,6 @@ private:
 
     friend class QCPAbstractLegendItem;
 };
-
 Q_DECLARE_OPERATORS_FOR_FLAGS(QCPLegend::SelectableParts)
 Q_DECLARE_METATYPE(QCPLegend::SelectablePart)
 
@@ -3504,7 +3480,6 @@ class QCPColorScaleAxisRectPrivate : public QCPAxisRect {
     Q_OBJECT
 public:
     explicit QCPColorScaleAxisRectPrivate(QCPColorScale *parentColorScale);
-
 protected:
     QCPColorScale *mParentColorScale;
     QImage mGradientImage;
