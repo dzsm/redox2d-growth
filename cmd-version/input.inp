@@ -1,50 +1,3 @@
-# redox2d-growth
-Growth simulator for 2d hexagonal redox system with hexa multigrid.
-
-
-Growth simulation of resistive memristors:
-
-https://www.youtube.com/watch?v=W9CEvGQ-yew
-
-https://www.youtube.com/watch?v=DWqTSSCZ8GM
-
-Basic theory: https://media.nature.com/original/nature-assets/srep/2016/160804/srep30775/extref/srep30775-s1.pdf
-
-However this is a generalization of what is written there to handle general growth porblem driven by diffusion and possison equation. If you want to level up I am happy to help, contact me.
-
-To solve Hexagonal MULTI GRID efficiently use the grid sizes listed in the grid-efficient-possion.pdf file.
-
-Input and the grid should be given as:
-
-state 6 12
- u u u u u u 
-u u u u u u 
- o o o o o o
-. . . . . . 
- o o o o o o
-. . . . . . 
- . . o . . . 
-o o o o o o 
- o o o o o o 
-o o o o o o 
- l l l l l l 
-l l l l l l 
-
-sites 6 12
- u u u u u u 
-u u u u u u 
- . . . . . .
-. . . . . . 
- . . . . . .
-. . . . . . 
- . z z z z . 
-. . . . . . 
- . . . . . . 
-o o o o o o 
- l l l l l l 
-l l l l l l 
-
-
 -----------------
 type         13   .    o    +    -   *   a   x    y     z     u    b    l    r   
 site         13   .    o    +    -   *   a   x    y     z     u    b    l    r    
@@ -82,15 +35,4 @@ every  10
 
 colorState 13 lightgray black red yellow gray gray darkgreen gray gray darkblue green darkred green  
 colorSites 13 lightgray black red yellow gray gray darkgreen gray gray darkblue green darkred green  
-
-
-### CMD-VERSION Usage:
-
-> ./rdx2dg input.inp output.out -state state.txt -sites state.txt 
-
-To plot use:
-
-> mkdir pngs
-> python plot_output.py
-
 

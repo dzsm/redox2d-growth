@@ -1,0 +1,56 @@
+state 6 12
+ u u u u u u 
+u u u u u u 
+ o o o o o o
+. . . . . . 
+ o o o o o o
+. . . . . . 
+ . . o . . . 
+o o o o o o 
+ o o o o o o 
+o o o o o o 
+ l l l l l l 
+l l l l l l 
+
+sites 6 12
+ u u u u u u 
+u u u u u u 
+ . . . . . .
+. . . . . . 
+ . . . . . .
+. . . . . . 
+ . z z z z . 
+. . . . . . 
+ . . . . . . 
+o o o o o o 
+ l l l l l l 
+l l l l l l 
+
+
+type     4   . o u l 
+site     5   . o u l z
+boundary 2   l 0.0 _ 1 0.0 1.0    u 0.6 $1 2 -1.0 3.0 +1.0 3.0  # R var numof ui dti ...       
+sigma    1 o,u,l o,u,l 10
+a 1
+h 1
+dt 0.1
+kT 0.05;
+omega 0.001
+ox  2 o,u l o 1.5 2.5 3.5   o,u l o 1.5 2.5 3.5
+red 2 o,u l o 1.5 2.5 3.5   o,u l o 1.5 2.5 3.5
+pattern 1 1>o .,u o,l 1.0
+current 3 $2 o l $3 o u $4 z o
+voltage 2 $0 l $1 u
+
+
+seed 0
+flagPoisson   1
+flagDiffusion 0
+flagRedox     0
+flagPattern   0
+
+run 1
+every 10
+
+colorState 12 lightgray black red gray darkblue darkred lightgray black red gray darkblue darkred 
+colorSites 12 lightgray black red gray darkblue darkred lightgray black red gray darkblue darkred 
